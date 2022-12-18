@@ -1,0 +1,133 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --off-cyan: hsl(179, 62%, 43%, 0.8);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+    font-size: 16px;
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    align-content: center;
+
+}
+
+.card {
+    background-color: white;
+    max-width: 700px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px -1px var(--grayish-blue);
+    overflow: hidden;
+    
+
+}
+
+.header,
+.subscribe,
+.why {
+    padding: 20px 50px;
+}
+
+.lower {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    
+}
+
+.subscribe {
+    background-color: var(--cyan);
+   width: 50%;
+    color: white;
+}
+
+.subscribe .bold {
+    font-weight: 700;
+    font-size: 2.2rem;
+    padding-right: 0.5rem;
+}
+
+
+
+.why {
+    background-color: var(--off-cyan);
+    width: 50%;
+    color: white;
+}
+
+.reasons {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.5rem;
+    color: var(--light-gray);
+}
+
+.cyan {
+    color: var(--cyan);
+}
+
+.bright-yellow {
+    color: var(--bright-yellow);
+}
+
+.header p {
+    color: var(--grayish-blue);
+    line-height: 1.5rem;
+}
+
+.month {
+    color: var(--light-gray);
+    position: relative;
+    top: -7px;
+    opacity: 0.8;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 700;
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    width: 100%;
+    border-style: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 10px 0 hsl(179, 62%, 33%);
+    margin-top: 1rem;
+}
+
+button:hover {
+    text-shadow: 1px 1px 5px hsl(218, 22%, 67%);
+    box-shadow: 0 2px 20px 0 hsl(179, 62%, 33%);
+    transform: scale(1.02);
+}
+
+@media (max-width: 425px) {
+    .card {
+        font-size: 0.8rem;
+    }
+
+    .subscribe {
+        width: 100%;
+        }
+
+    .why {
+        width: 100%;
+    }
+}
